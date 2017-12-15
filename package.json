@@ -1,0 +1,26 @@
+{
+  "name": "application-name",
+  "version": "1.0.0",
+  "description": "html5Templates",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "rimraf dist && gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JiangYang",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

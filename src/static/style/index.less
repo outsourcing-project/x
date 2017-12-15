@@ -1,0 +1,100 @@
+@import "../style/normalize";
+.pb50 {
+  padding-bottom: 50px;
+}
+.fix_bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .fix_bottom-item {
+    display: block;
+    padding: 5px 0 3px;
+    text-align: center;
+    font-size: 10px;
+    color: #D8D8D8;
+    width: 50%;
+    &.active {
+      color: #FF154B;
+      .icon_paper {
+        background: url("../img/icon_paper-active.png") no-repeat center center / 23px 23px;
+      }
+      .icon_person {
+        background: url("../img/icon_person-active.png") no-repeat center center / 22px 23px;
+      }
+    }
+    div {
+      padding-top: 5px;
+    }
+  }
+}
+.sign_out {
+  text-align: center;
+  font-size: 14px;
+  color: #4E4E4E;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+}
+.icon_paper {
+  display: block;
+  background: url("../img/icon_paper.png") no-repeat center center / 23px 23px;
+  width: 23px;
+  height: 23px;
+  margin: 0 auto;
+}
+.icon_person {
+  display: block;
+  background: url("../img/icon_person.png") no-repeat center center / 22px 23px;
+  width: 23px;
+  height: 23px;
+  margin: 0 auto;
+}
+.project {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+  margin: 10px;
+  padding: 13px 24px;
+  .project_b {
+    color: #B3B3B3;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    color: #46454C;
+    font-size: 17px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+.tap_item {
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #4E4E4E;
+  margin: 10px auto;
+  padding: 20px;
+}
+.tap_box {
+  background: url("../img/arrow_r.png") no-repeat right center / 7px 12px #ffffff;
+  padding-right: 20px;
+}
+.box_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.font_gray {
+  color: #B3B3B3 !important;
+}
