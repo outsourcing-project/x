@@ -398,3 +398,37 @@
   display: flex;
   padding: 5px;
 }
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 0.2s;
+  background: #fff;
+  z-index: 999;
+  overflow: scroll;
+  &.active {
+    transform: translateY(0);
+  }
+}
+.close-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/close.png) no-repeat center center / 20px 20px;
+  z-index: 999;
+}
+.float_ele {
+  display: none;
+}
