@@ -20,7 +20,7 @@
             </div>
             <div class="input_section input_verify">
                 <input type="email" placeholder="验证码">
-                <div class="get_verify">获取验证码</div>
+                <div class="get_verify js_verify">获取验证码</div>
             </div>
             <button class="btn btn-bound" id="form_btn">登录</button>
         </form>
@@ -50,6 +50,19 @@
         }
         $('#form_btn').on('click', function() {
             checkMobile()
+        })
+
+        $('.js_verify').on('click', function() {
+            var cout_down = 60
+            var _this = $(this)
+            var timeDown = setInterval(function() {
+                cout_down--
+                _this.html(cout_down)
+                if (cout_down <= 0) {
+                    clearInterval(timeDown)
+                    _this.html('获取验证码')
+                }
+            },1000)
         })
       })
     </script>
