@@ -27,11 +27,11 @@
     </div>
     <div class="pb-section flex">
         <span class="k">投资份额</span>
-        <input class="input tr number_b" type="text" placeholder="例:40%">
+        <input class="input tr number_b" type="number" placeholder="例:40%">
     </div>
     <div class="pb-section flex">
         <span class="k">投资周期</span>
-        <input class="input tr number_c" type="text" placeholder="例1.5年">
+        <input class="input tr number_c" type="number" placeholder="例1.5年">
     </div>
     <div class="pb-section flex">
         <span class="k">预估回报</span>
@@ -53,25 +53,41 @@
       $(function () {
         $('.j_publish').on('click', function() {
             var number_a = $('.number_a').val();
-            // var number_b = $('.number_b').val();
-            // var number_c = $('.number_c').val();
-            // var number_d = $('.number_d').val();
-            if (!$.isNumeric(number_a)) {
-                alert('请输入数字')
+            var number_b = $('.number_b').val();
+            var number_c = $('.number_c').val();
+            var number_d = $('.number_d').val();
+
+            if (!$.isNumeric(number_a) || !number_a) {
+                $('.number_a').val('')
+                $('.number_a').parents('.pb-section').addClass('fail')
                 return
+            } else {
+                $('.number_a').parents('.pb-section').removeClass('fail')
             }
-            // if (!$.isNumeric(number_b)) {
-            //     alert('请输入数字')
-            //     return
-            // }
-            // if (!$.isNumeric(number_c)) {
-            //     alert('请输入数字')
-            //     return
-            // }
-            // if (!$.isNumeric(number_d)) {
-            //     alert('请输入数字')
-            //     return
-            // }
+
+            if (!$.isNumeric(number_b) || !number_b) {
+                $('.number_b').val('')
+                $('.number_b').parents('.pb-section').addClass('fail')
+                return
+            } else {
+                $('.number_b').parents('.pb-section').removeClass('fail')
+            }
+
+            if (!$.isNumeric(number_c) || !number_c) {
+                $('.number_c').val('')
+                $('.number_c').parents('.pb-section').addClass('fail')
+                return
+            } else {
+                $('.number_c').parents('.pb-section').removeClass('fail')
+            }
+
+            if (!$.isNumeric(number_d) || !number_d) {
+                $('.number_d').val('')
+                $('.number_d').parents('.pb-section').addClass('fail')
+                return
+            } else {
+                $('.number_d').parents('.pb-section').removeClass('fail')
+            }
         })
       })
     </script>
