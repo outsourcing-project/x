@@ -334,6 +334,21 @@
     font-size: 14px;
     outline: none;
     border: 0;
+    &::placeholder {
+      color: #333;
+    }
+    &::-webkit-input-placeholder {
+      color: #333;
+    }
+    &:-moz-placeholder {
+      color: #333;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #333;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #333;
+    }
   }
   .tr {
     text-align: right;

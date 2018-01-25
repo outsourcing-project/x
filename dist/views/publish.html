@@ -15,31 +15,31 @@
     </div>
     <div class="pb-section flex">
         <span class="k">项目名称</span>
-        <input class="input tr" type="text" placeholder="输入内容">
+        <input class="input tr" type="text" placeholder="例:西游记">
     </div>
     <div class="pb-section flex">
         <span class="k">主控主题</span>
-        <input class="input tr" type="text" placeholder="输入内容">
+        <input class="input tr" type="text" placeholder="例:北京电影学院">
     </div>
     <div class="pb-section flex">
         <span class="k">项目总投资</span>
-        <input class="input tr number_a" type="number" placeholder="输入内容">
+        <input class="input tr number_a" type="number" placeholder="例:1000000">
     </div>
     <div class="pb-section flex">
         <span class="k">投资份额</span>
-        <input class="input tr number_b" type="number" placeholder="输入内容">
+        <input class="input tr number_b" type="text" placeholder="例:40%">
     </div>
     <div class="pb-section flex">
         <span class="k">投资周期</span>
-        <input class="input tr number_c" type="text" placeholder="输入内容">
+        <input class="input tr number_c" type="text" placeholder="例1.5年">
     </div>
     <div class="pb-section flex">
         <span class="k">预估回报</span>
-        <input class="input tr number_d" type="number" placeholder="输入内容">
+        <input class="input tr number_d" type="number" placeholder="例:200%">
     </div>
     <div class="pb-section flex">
         <span class="k">项目进度</span>
-        <input class="input tr" type="text" placeholder="输入内容">
+        <input class="input tr" type="text" placeholder="例:已拍摄">
     </div>
     <div class="pb-section">
         <div class="tip">备注</div>
@@ -53,25 +53,25 @@
       $(function () {
         $('.j_publish').on('click', function() {
             var number_a = $('.number_a').val();
-            var number_b = $('.number_b').val();
-            var number_c = $('.number_c').val();
-            var number_d = $('.number_d').val();
+            // var number_b = $('.number_b').val();
+            // var number_c = $('.number_c').val();
+            // var number_d = $('.number_d').val();
             if (!$.isNumeric(number_a)) {
                 alert('请输入数字')
                 return
             }
-            if (!$.isNumeric(number_b)) {
-                alert('请输入数字')
-                return
-            }
-            if (!$.isNumeric(number_c)) {
-                alert('请输入数字')
-                return
-            }
-            if (!$.isNumeric(number_d)) {
-                alert('请输入数字')
-                return
-            }
+            // if (!$.isNumeric(number_b)) {
+            //     alert('请输入数字')
+            //     return
+            // }
+            // if (!$.isNumeric(number_c)) {
+            //     alert('请输入数字')
+            //     return
+            // }
+            // if (!$.isNumeric(number_d)) {
+            //     alert('请输入数字')
+            //     return
+            // }
         })
       })
     </script>
