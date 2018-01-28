@@ -9,49 +9,123 @@
     <link rel="stylesheet" href="../static/style/index.css">
 </head>
 <body class="pb50">
+    <form action="">
     <div class="detail-section noflex my-file">
         <h4>附件名称</h4>
         <div class="t">2017-12-03 12:00</div>
     </div>
     <div class="pb-section flex">
         <span class="k">项目名称</span>
-        <input class="input tr pro_name" type="text" placeholder="例:西游记">
+        <input class="input tr pro_name" name="name" type="text" placeholder="例:西游记">
     </div>
     <div class="pb-section flex">
         <span class="k">主控主题</span>
-        <input class="input tr pro_author" type="text" placeholder="例:北京电影学院">
+        <input class="input tr pro_author" type="text" name="theme" placeholder="例:北京电影学院">
     </div>
     <div class="pb-section flex">
         <span class="k">项目总投资</span>
-        <input class="input tr number_a" type="number" placeholder="例:1000000">
+        <input class="input tr number_a" type="number" name="total_amount" placeholder="例:1000000">
     </div>
     <div class="pb-section flex">
         <span class="k">投资份额</span>
-        <input class="input tr number_b" type="text" placeholder="例:40%">
+        <input class="input tr number_b" type="text" name="share_amount" placeholder="例:40%">
     </div>
     <div class="pb-section flex">
         <span class="k">投资周期(单位月)</span>
-        <input class="input tr number_c" type="number" placeholder="例:20">
+        <input class="input tr number_c" type="number" name="cycle" placeholder="例:20">
     </div>
     <div class="pb-section flex">
         <span class="k">预估回报</span>
-        <input class="input tr number_d" type="text" placeholder="例:200%">
+        <input class="input tr number_d" type="text" name="expect_return" placeholder="例:200%">
     </div>
     <div class="pb-section flex">
         <span class="k">项目进度</span>
-        <input class="input tr requ" type="text" placeholder="例:已拍摄">
+        <input class="input tr requ" type="text" name="progress" placeholder="例:已拍摄">
     </div>
     <div class="pb-section">
         <div class="tip">备注</div>
-        <textarea class="text textarea" placeholder="输入内容"></textarea>
+        <textarea class="text textarea" name="note" placeholder="输入内容"></textarea>
     </div>
     <button class="btn-pink-large j_publish">发布</button>
+    </form>
 
 
     <script src="../static/vendor/jquery-3.1.1.min.js"></script>
     <script>
       $(function () {
-        $('.j_publish').on('click', function() {
+        // $('.j_publish').on('click', function() {
+        //     var number_a = $('.number_a').val();
+        //     var number_b = $('.number_b').val();
+        //     var number_c = $('.number_c').val();
+        //     var number_d = $('.number_d').val();
+        //     var pro_name = $('.pro_name').val();
+        //     var pro_author = $('.pro_author').val();
+        //     var r = /^[0-9]*[1-9][0-9]*$/ //正整数
+        //     var re = /^-?\d+%$/; // 百分比
+
+        //     if (!pro_name) {
+        //         $('.pro_name').val('');
+        //         $('.pro_name').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.pro_name').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!pro_author) {
+        //         $('.pro_author').val('');
+        //         $('.pro_author').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.pro_author').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!r.test(number_a)) {
+        //         $('.number_a').val('')
+        //         $('.number_a').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.number_a').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!re.test(number_b)) {
+        //         $('.number_b').val('')
+        //         $('.number_b').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.number_b').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!r.test(number_c)) {
+        //         $('.number_c').val('')
+        //         $('.number_c').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.number_c').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!re.test(number_d)) {
+        //         $('.number_d').val('')
+        //         $('.number_d').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.number_d').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!$('.requ').val()) {
+        //         $('.requ').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.requ').parents('.pb-section').removeClass('fail')
+        //     }
+
+        //     if (!$('.textarea').val()) {
+        //         $('.textarea').parents('.pb-section').addClass('fail')
+        //         return
+        //     } else {
+        //         $('.textarea').parents('.pb-section').removeClass('fail')
+        //     }
+        // })
+        $('form').submit(function(event) {
             var number_a = $('.number_a').val();
             var number_b = $('.number_b').val();
             var number_c = $('.number_c').val();
@@ -60,69 +134,67 @@
             var pro_author = $('.pro_author').val();
             var r = /^[0-9]*[1-9][0-9]*$/ //正整数
             var re = /^-?\d+%$/; // 百分比
-
             if (!pro_name) {
                 $('.pro_name').val('');
                 $('.pro_name').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.pro_name').parents('.pb-section').removeClass('fail')
             }
-
             if (!pro_author) {
                 $('.pro_author').val('');
                 $('.pro_author').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.pro_author').parents('.pb-section').removeClass('fail')
             }
-
             if (!r.test(number_a)) {
                 $('.number_a').val('')
                 $('.number_a').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.number_a').parents('.pb-section').removeClass('fail')
             }
-
-            if (!re.test(number_b)) {
-                $('.number_b').val('')
-                $('.number_b').parents('.pb-section').addClass('fail')
-                return
+            if (!Boolean(number_b.match(re))) {
+                if (!Boolean(number_b.match(r))) {
+                    $('.number_b').val('')
+                    $('.number_b').parents('.pb-section').addClass('fail')
+                    return false
+                } else {
+                    $('.number_b').parents('.pb-section').removeClass('fail')
+                }
             } else {
                 $('.number_b').parents('.pb-section').removeClass('fail')
             }
-
             if (!r.test(number_c)) {
                 $('.number_c').val('')
                 $('.number_c').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.number_c').parents('.pb-section').removeClass('fail')
             }
-
             if (!re.test(number_d)) {
                 $('.number_d').val('')
                 $('.number_d').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.number_d').parents('.pb-section').removeClass('fail')
             }
-
             if (!$('.requ').val()) {
                 $('.requ').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.requ').parents('.pb-section').removeClass('fail')
             }
-
             if (!$('.textarea').val()) {
                 $('.textarea').parents('.pb-section').addClass('fail')
-                return
+                return false
             } else {
                 $('.textarea').parents('.pb-section').removeClass('fail')
             }
-        })
+
+            return true
+        });
       })
     </script>
 </body>
